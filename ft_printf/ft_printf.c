@@ -13,6 +13,8 @@ int ft_putstr(char *s)
 
     i = 0;
     len = 0;
+    if (!s)
+        return (write(1, "(null)", 7));
     while (s[i])
     {
         len += ft_putchar(s[i]);
